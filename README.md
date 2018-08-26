@@ -1,5 +1,8 @@
 # st-entry-project
 
+This is all from the default README file.
+
+
 ## Project setup
 ```
 npm install

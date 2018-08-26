@@ -4,7 +4,7 @@
     <v-content>
       <HelloWorld></HelloWorld>
       <v-layout row wrap>
-        <v-flex xs12 sm6 md4>
+        <v-flex xs12 sm6 md3>
           <v-text-field
             hint="City,Country Code"
             label="Please enter your city here"
@@ -13,10 +13,10 @@
             v-model="cityRequest"
           ></v-text-field>
         </v-flex>
-        <v-flex xs12 sm6 md4>
+        <v-flex xs12 sm6 md3>
           <v-btn @click="requestCity">Request Weather Data</v-btn>
         </v-flex>
-        <v-flex xs12 sm6 md4>
+        <v-flex xs12 sm6 md6>
           <v-text-field
             v-model="outputData"
             auto-grow
