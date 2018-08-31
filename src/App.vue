@@ -3,32 +3,41 @@
 
     <v-content>
       <HelloWorld></HelloWorld>
+
       <v-layout row wrap>
+
         <v-flex xs12 sm6 md3>
           <v-text-field
             hint="City,Country Code"
             label="Please enter your city here"
             single-line
             outline
+            class="inputTextField"
             v-model="cityRequest"
           ></v-text-field>
         </v-flex>
+
         <v-flex xs12 sm6 md3>
           <v-btn @click="requestCity">Request Weather Data</v-btn>
         </v-flex>
-        <v-flex xs12 sm6 md6>
+
+        <v-flex xs12 sm12 md6>
           <v-text-field
-            v-model="outputData"
             auto-grow
+            fill-height
             textarea
+            class="outputTextField"
+            v-model="outputData"
           ></v-text-field>
         </v-flex>
-</v-layout>
+
+      </v-layout>
     </v-content>
 
     <v-footer :fixed="fixed" app>
       <span>&copy; 2018</span>
     </v-footer>
+
   </v-app>
 </template>
 
@@ -38,6 +47,9 @@
   }
   span {
     padding-left: 10px;
+  }
+  .inputTextField, .outputTextField {
+    border: 2px dashed black;
   }
 </style>
 
@@ -63,8 +75,6 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js',
-      first: 'John',
-      last: 'Doe',
       cityRequest: '',
       outputData: '',
 
